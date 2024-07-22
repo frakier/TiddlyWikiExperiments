@@ -6,4 +6,4 @@ MacroTutorial-TiddlyWiki-5.3.3.html - standalone tiddlywiki, first time I got a 
 
 TinkaPluginTutorial-TiddlyWiki-5.3.3.html - standalone tiddlywiki, first time I got a plugin to work as I expected and used Tinka to package it.
 
-TiddlyNodeTutorial.zip - set up node, got it ot work and recreated the plugin using the node method.
+TiddlyNodeTutorial.zip - set up node, got it to work with tiddlywiki and recreated the plugin using the node method.
