@@ -1,9 +1,6 @@
 # TiddlyWikiExperiments
 My experiments with tiddlywiki
 
+Most TW's are open licences nothing in them that need a licences for my part of the contente, the TW license is in place as expected.
+Some Plugins I have licesed seperately, still mostly open just set up so someon cannot slap their name on them and claim them.
 
-MacroTutorial-TiddlyWiki-5.3.3.html - standalone tiddlywiki, first time I got a macro to work as I expected
-
-TinkaPluginTutorial-TiddlyWiki-5.3.3.html - standalone tiddlywiki, first time I got a plugin to work as I expected and used Tinka to package it.
-
-TiddlyNodeTutorial.zip - set up node, got it to work with tiddlywiki and recreated the plugin using the node method.
