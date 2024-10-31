@@ -47,7 +47,7 @@ Most my TW's are open licences nothing in them that need a licences for my part 
 -- Same test plugin from the node.js test only this is a normal TW5 with the plugin and Tinka plugin installed.
 -- I use the Tinka plugin quite a lot.
 
-parameterized-svg-testing.html</i></b><br>
+<b><i>parameterized-svg-testing.html</i></b><br>
 -- Playing with paramterized svg, to see what I can do with some custom svgs.
 
 table-of-contents-test.html</i></b><br>
