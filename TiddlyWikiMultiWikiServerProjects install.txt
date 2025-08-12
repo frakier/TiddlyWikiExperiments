@@ -1,0 +1,90 @@
+Tried using the download script from https://nodejs.org/en/download
+But it seemed to be folder specific or some other random crap I even though I though it was not supposed to be.
+The basic 'apt install nodejs' gets the system version, no help there.
+used the web page to get the code below
+https://nodesource.com/products/distributions
+
+sudo apt-get install -y curl
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+sudo apt-get install -y nodejs
+node -v
+
+=================================
+Installed npm globally
+
+sudo npm install -g npm@latest
+
+=================================
+using the instructions from https://mws.tiddlywiki.com/static/Installation.html
+
+npm init @tiddlywiki/mws@latest "twcollection"
+
+cd "twcollection"
+
+npx mws init-store
+
+npx mws listen --listener
+
+http://localhost:8080/
+
+or
+
+http://127.0.0.1:8080/
+
+It worked... now to experiment.
+
+login
+admin
+1234
+
+=================================
+
+I had problems with existing versions of node, npm, etc so I ruipped it all out and purdged it all
+
+LAST RESORT: NO GUARNTEES
+===================
+
+sudo apt-get remove nodejs npm node
+sudo apt-get purge nodejs
+
+sudo apt autoremove
+
+sudo rm -rf /usr/local/bin/npm
+sudo rm -rf /usr/local/share/man/man1/node*
+sudo rm -rf /usr/local/lib/dtrace/node.d
+rm -rf ~/.npm
+rm -rf ~/.node-gyp
+sudo rm -rf /opt/local/bin/node
+sudo rm -rf /opt/local/include/node
+sudo rm -rf /opt/local/lib/node_modules
+sudo rm -rf /usr/local/lib/node*
+sudo rm -rf /usr/local/include/node*
+sudo rm -rf /usr/local/noebin/node*
+
+CHECKING
+===================
+
+RESTART and check to see if all is removed
+
+which node
+which nodejs
+which npm
+
+whereis node
+whereis nodejs
+whereis npm
+
+node -v
+nodejs -v
+npm -v
+
+===================
+GO BACK TO THE TOP AND TRY AGAIN
+
+
+===================
+One you go to the webpage
+
+default user name and password are...
+user name: admin
+password: 1234
