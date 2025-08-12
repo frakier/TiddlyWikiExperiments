@@ -1,0 +1,126 @@
+https://arlen22.github.io/tiddlyserver/docs/gettingstarted
+https://github.com/phlummox-patches/TiddlyServer/blob/v2.2/README.md
+
+Documenting Tiddlywiki  + Node.js + tiddleserver Install and setup
+
+My Current Setup
+
+Linux Mint 22 Wilma 64-bit
+MATE 1.26.2
+Tiddlywiki 5.3.8
+node.js v18.19.1
+
+apt install nodejs
+
+apt install npm
+
+sudo npm install -g tiddlywiki
+
+tiddlywiki --version
+
+sudo npm install tiddlyserver -g
+
+create the following folder structure
+you can change the collections and the wiki1, wiki2, wiki3 to whatever you want
+you can also add more wiki's or delete them as you want.
+
+open the collections folder in terminal and use the following to create the wiki folder
+if you do not want to do this by hand and tiddlywiki.info in each one
+
+tiddlywiki wiki1 --init server
+tiddlywiki wiki2 --init server
+tiddlywiki wiki3 --init server
+
+
+twcollection
+    ├── wiki1/
+    │   ├── languages
+    │   ├── themes
+    │   ├── tiddlywiki.info
+    │   ├── tiddlers
+    │   └── plugins
+    │       └── {some plugin}
+    |
+    ├── wiki2/
+    │   ├── languages
+    │   ├── themes
+    │   ├── tiddlywiki.info
+    │   ├── tiddlers
+    │   └── plugins
+    │       └── {some plugin}
+    |
+    ├── wiki3/
+    │   ├── languages
+    │   ├── themes
+    │   ├── tiddlywiki.info
+    │   ├── tiddlers
+    │   └── plugins
+    │       └── {some plugin}
+    |
+    └── settings.json
+
+tiddlywiki.files for the most part are...
+{
+    "directories": [
+        {
+            "path": "../../../shared/tiddlers",
+            "isTiddlerFile": true,
+            "isEditableFile": true,
+            "searchSubdirectories": true,
+            "fields": {
+                "source": "shared"
+            }
+        }
+    ]
+}
+
+In my case I wanted to experiment some so in the wiki1 i added a directory pointing to the wiki2 like so.
+Proceeding very carefully so as not to create a circular refrence of course.
+{
+    "directories": [
+        {
+            "path": "../../../shared/tiddlers",
+            "isTiddlerFile": true,
+            "isEditableFile": true,
+            "searchSubdirectories": true,
+            "fields": {
+                "source": "shared"
+            }
+        },
+        {
+            "path": "../../../wiki2/tiddlers",
+            "isTiddlerFile": true,
+            "isEditableFile": true,
+            "searchSubdirectories": true,
+            "fields": {
+                "source": "shared"
+            }
+        }
+    ]
+}
+
+settings.json are...
+{
+  "tree": {
+    "wiki1": "./wiki1",
+    "wiki2": "./wiki2",
+    "wiki3": "./wiki3"
+  },
+	"bindInfo": {"bindAddress": ["127.0.0.1"], "port": 8080},
+	"putsaver": {"backupFolder": "../backups"},
+	"$schema": "./settings-2-1.schema.json"
+}
+
+open terminal in the collections folder if not already open
+
+tiddlyserver --config settings.json
+
+you may need to sudo if you see permisison errors where it trys to use the usr folder on linux
+
+sudo tiddlyserver --config settings.json
+
+http://localhost:8080/
+
+or
+
+http://127.0.0.1:8080/

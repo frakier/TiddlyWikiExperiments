@@ -1,0 +1,25 @@
+Documenting Tiddlywiki  + Node.js Install and setup
+
+Current Setup
+
+Linux Mint 22 Wilma 64-bit
+MATE 1.26.2
+Tiddlywiki 5.3.8
+node.js v18.19.1
+
+apt install nodejs
+
+apt install npm
+
+sudo npm install -g tiddlywiki
+
+tiddlywiki --version
+
+navigate to where you want to create the tw
+i'm using a folder to work in "EZD6_TW_NODEJS"
+I open a teminal in that folder and...
+
+tiddlywiki EZD_Collections --init server
+tiddlywiki EZD_Collections --listen
+
+http://127.0.0.1:8080/
